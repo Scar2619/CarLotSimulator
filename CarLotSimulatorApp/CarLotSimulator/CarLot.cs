@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+
 namespace CarLotSimulator
 {
 	public class CarLot
@@ -8,7 +10,11 @@ namespace CarLotSimulator
 		{
 		}
 
+		public static int numberOfCars = 1;
+
 		public List<Car> Cars = new List<Car>();
+
+		
 	}
 }
 

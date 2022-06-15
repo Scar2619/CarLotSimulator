@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace CarLotSimulator
 {
@@ -7,6 +8,8 @@ namespace CarLotSimulator
         static void Main(string[] args)
         {
             var lot = new CarLot();
+
+            
 
             //.dot syntax
             Car firstCar = new Car();
@@ -32,24 +35,35 @@ namespace CarLotSimulator
             var thirdCar = new Car(2020, "Toyota", "Rav4", "Zooooom", "Boom snap", true);
 
             //Call methods
-            firstCar.MakeEngineNoise();
-            secondCar.MakeEngineNoise();
-            thirdCar.MakeEngineNoise();
+            //firstCar.MakeEngineNoise();
+            //secondCar.MakeEngineNoise();
+            //thirdCar.MakeEngineNoise();
 
-            firstCar.MakeHonkNoise();
-            secondCar.MakeHonkNoise();
-            thirdCar.MakeHonkNoise();
+            //firstCar.MakeHonkNoise();
+            //secondCar.MakeHonkNoise();
+            //thirdCar.MakeHonkNoise();
 
             //CarLot Adds
+            //Count # of cars added to CarLot
             lot.Cars.Add(firstCar);
+            
             lot.Cars.Add(secondCar);
+   
             lot.Cars.Add(thirdCar);
 
+            Console.WriteLine($"Current number of cars: {CarLot.numberOfCars}");
+
             //Iterate through list
-            foreach(var car in lot.Cars)
+            foreach (var car in lot.Cars)
             {
                 Console.WriteLine($"Year: {car.Year} Make: {car.Make} Model: {car.Model}");
             }
+
+
+
+
+
+
 
 
             //TODO
